@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Springfield Academy CMS - Development Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tufte-css/1.8.0/tufte.min.css">
+    <style>
+        /* Custom styles for navigation and enhanced Tufte layout */
+        :root {
+            --primary: #003366;
+            --gold: #FFB81C;
+            --gray: #4A5568;
+            --light-gray: #F7FAFC;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        
+        /* Fixed Navigation */
+        .nav-sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 280px;
+            height: 100vh;
+            background: #FFFFFF;
+            border-right: 2px solid #E2E8F0;
+            overflow-y: auto;
+            padding: 2rem 1rem;
+            z-index: 1000;
+        }
+        
+        .nav-header h2 {
+            color: var(--primary);
+        }
+        
+        .nav-section h3 {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #6B7280;
+            margin-bottom: 0.75rem;
+        }
+        
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .nav-links a {
+            color: #1F2937;
+            text-decoration: none;
+            padding: 0.5rem 0.75rem;
+            display: block;
+            border-radius: 6px;
+            transition: all 0.15s ease;
+        }
+        
+        .nav-links a:hover {
+            background-color: var(--light-gray);
+            color: var(--primary);
+        }
+        
+        /* Main Content Area */
+        .main-content {
+            margin-left: 280px;
+            padding: 2rem 4rem;
+        }
+        
+        /* Tufte Enhancements */
+        .sidenote-number { color: var(--gold); }
+        
+        pre {
+            background: #F7FAFC;
+            border-left: 3px solid var(--gold);
+            padding: 1rem;
+            overflow-x: auto;
+        }
+
+        @media (max-width: 768px) {
+            .nav-sidebar { display: none; }
+            .main-content { margin-left: 0; padding: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-sidebar">
+        <div class="nav-header">
+            <h2>Springfield CMS Hub</h2>
+            <p style="font-size: 0.875rem; color: var(--gray);">Development Docs</p>
+        </div>
+        <hr style="margin: 1rem 0;">
+        <div class="nav-section">
+            <h3>Project Overview</h3>
+            <ul class="nav-links">
+                <li><a href="prd.md" target="content-frame">📄 Product Requirements</a></li>
+                <li><a href="implementation_plan.md" target="content-frame">🗺️ Implementation Plan</a></li>
+            </ul>
+        </div>
+        <div class="nav-section">
+            <h3>Getting Started</h3>
+            <ul class="nav-links">
+                <li><a href="preflight_checklist.md" target="content-frame">📋 Pre-Flight Checklist</a></li>
+                <li><a href="preflight_dashboard.html" target="content-frame">🚀 Interactive Dashboard</a></li>
+            </ul>
+        </div>
+        <div class="nav-section">
+            <h3>For the Agent</h3>
+            <ul class="nav-links">
+                <li><a href="agent_os_context.md" target="content-frame">🤖 Agent Context</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <article class="main-content">
+        <h1>Welcome to the Springfield CMS Development Hub</h1>
+        <p class="subtitle">Use the navigation on the left to view the project documentation.</p>
+        <iframe name="content-frame" style="width: 100%; height: 85vh; border: 1px solid #E2E8F0; border-radius: 8px; margin-top: 1rem;"></iframe>
+    </article>
+</body>
+</html>
